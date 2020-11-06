@@ -1,0 +1,2887 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#"
+     xml:base="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation/1.0.0"/>
+        <dc:licence>Creative Commons Attribution 4.0 International License</dc:licence>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">futureCareerRecommendation</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/licence -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/licence"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IsAttendingEducationalInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IsAttendingEducationalInstitution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasStudent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#educationPursuedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#educationPursuedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#pursuesEducation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasBackground -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasBackground">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isBackgroundOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isPartOfCountry"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEducation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEducationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEmploymentStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEmploymentStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEmploymentStatusOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseScale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseScale">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseScaleOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseSizeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobResponsibility -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobResponsibility">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobResponsibilityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobTask">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTaskOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTypeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasStudent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasStudent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isBackgroundOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isBackgroundOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEducationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEducationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEmploymentStatusOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEmploymentStatusOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseScaleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseScaleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseSizeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseSizeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobResponsibilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobResponsibilityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTaskOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTaskOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isLocationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isPartOfCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isPartOfCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isPreferenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isPreferenceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#prefers"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProposedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProposedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#proposesJob"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProvidedByEducationalInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProvidedByEducationalInstitution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isRequiredForJob -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isRequiredForJob">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#requiresBackground"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#prefers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#prefers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#proposesJob -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#proposesJob">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#pursuesEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#pursuesEducation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#requiresBackground -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#requiresBackground">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasFirstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasLastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasZipCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasZipCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Academy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Academy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AerospaceDefense -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AerospaceDefense">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AirFreightLogistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AirFreightLogistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Airlines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Airlines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutoComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutoComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutomobilesComponents"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Automobiles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Automobiles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Automobiles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutomobilesComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutomobilesComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutomobilesComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isBackgroundOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Banks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Banks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Beverages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Beverages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BoardingSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BoardingSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BuildingProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BuildingProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Industrials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalMarkets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalMarkets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Chemicals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CollectionHobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CollectionHobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#College -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#College">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialProfessionalServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialProfessionalServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Industrials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialServicesSupplies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialServicesSupplies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialProfessionalServices"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProfessionalServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationsEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationsEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CompetitiveHobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CompetitiveHobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ComprehensiveSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ComprehensiveSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionEngineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionEngineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionMaterials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionMaterials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerFinance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerFinance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContainersPackaging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContainersPackaging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Conventional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Conventional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Private"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#StartUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isLocationOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DesignSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DesignSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProgrammingSkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Distributors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Distributors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedConsumerServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedConsumerServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerServices"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HotelsRestaurantsLeisure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancialServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancialServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedTelecommunicationServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedTelecommunicationServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodEducation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalHobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalHobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasStudent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricUtilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricUtilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricalEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricalEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectronicEquipmentInstrumentsComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectronicEquipmentInstrumentsComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElementarySchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElementarySchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Unemployed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEmploymentStatusOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnergyEquipmentServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnergyEquipmentServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Energy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OilGasСonsumableFuels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseScale"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEnterpriseSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseScaleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isEnterpriseSizeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Entertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Entertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EquityRealEstateInvestmentTrusts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EquityRealEstateInvestmentTrusts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstate"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstateManagementDevelopment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Experience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Experience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Fixed_term_contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Fixed_term_contract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodStaplesRetailing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodStaplesRetailing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GasUtilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GasUtilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GeneralHobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GeneralHobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GraduateSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GraduateSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GrandeEcole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GrandeEcole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Gymnasium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Gymnasium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCare"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentSupplies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentSupplies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareProvidersServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareProvidersServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HighSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HighSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HotelsRestaurantsLeisure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HotelsRestaurantsLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdDurables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdDurables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdPersonalProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdPersonalProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdPersonalProducts"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PersonalProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ITServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ITServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareServices"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndependentPowerRenewableElectricityProducers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndependentPowerRenewableElectricityProducers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndustrialConglomerates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndustrialConglomerates">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Industrials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Industrials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InstituteOfTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InstituteOfTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Insurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Insurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InteractiveMediaServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InteractiveMediaServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InternetDirectMarketingRetail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InternetDirectMarketingRetail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobType"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProposedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#requiresBackground"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobResponsibilityOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTaskOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isJobTypeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kindergarten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kindergarten">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LeisureProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LeisureProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LifeScienceToolsServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LifeScienceToolsServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isLocationOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lyceum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lyceum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Machinery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Machinery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Marine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Marine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Media">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MetalsMining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MetalsMining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_PrimaryPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_PrimaryPart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_SecondaryPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_SecondaryPart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageREIT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageREIT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageRealEstateInvestmentTrusts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageRealEstateInvestmentTrusts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultiUtilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultiUtilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultilineRetail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultilineRetail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Non-Profit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Non-Profit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#NonProfessional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#NonProfessional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Nursery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Nursery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ObservationHobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ObservationHobby">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OilGasСonsumableFuels -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OilGasСonsumableFuels">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PaperForestProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PaperForestProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Permanent_contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Permanent_contract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasBackground"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEmploymentStatus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSituatedInLocation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Country"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PersonalProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PersonalProducts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdPersonalProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Pharmaceuticals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Pharmaceuticals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PharmaceuticalsBiotechnologyLifeSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Preschool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Preschool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryEducation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProfessionalExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProfessionalExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Experience"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#VolunteerExperience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProfessionalServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProfessionalServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialProfessionalServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProgrammingSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ProgrammingSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstateManagementDevelopment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstateManagementDevelopment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ResearchLaboratory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ResearchLaboratory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDiscretionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RoadRail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RoadRail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#providesEducation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryEducation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondarySchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondarySchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializationOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Self-Employed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Self-Employed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SemiconductorsSemiconductorEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SemiconductorsSemiconductorEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Seminary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Seminary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Software">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SpecialtyRetail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SpecialtyRetail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#StartUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#StartUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Private"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IsAttendingEducationalInstitution"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#pursuesEducation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareStoragePeripherals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareStoragePeripherals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TextilesApparelLuxuryGoods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TextilesApparelLuxuryGoods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ThriftsMortgageFinance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ThriftsMortgageFinance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Financials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Tobacco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Tobacco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TradingCompanieіDistributors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TradingCompanieіDistributors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Industrials"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TransportationInfrastructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TransportationInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Unemployed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Unemployed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#University">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UniversityPreparatorySchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UniversityPreparatorySchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UpperSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UpperSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#VolunteerExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#VolunteerExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Experience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WaterUtilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WaterUtilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Utilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WirelessTelecommunicationServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WirelessTelecommunicationServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employed"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScientist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScientist">
+        <isProposedBy rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Google">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#StartUp"/>
+        <isSituatedInLocation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kyiv"/>
+        <proposesJob rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kyiv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kyiv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+        <isSituatedInLocation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Ukraine"/>
+        <hasZipCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">01015</hasZipCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Ukraine"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Academy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BoardingSchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Gymnasium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HighSchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lyceum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_SecondaryPart"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondarySchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UniversityPreparatorySchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UpperSchool"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AerospaceDefense"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#BuildingProducts"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionEngineering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricalEquipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndustrialConglomerates"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Machinery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TradingCompanieіDistributors"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AirFreightLogistics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Airlines"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Marine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RoadRail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TransportationInfrastructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Fixed_term_contract"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Permanent_contract"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AutomobilesComponents"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerDurablesApparel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobResponsibility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Sector"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Banks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancials"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Insurance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ThriftsMortgageFinance"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Beverages"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodProducts"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Tobacco"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Biotechnology"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LifeScienceToolsServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Pharmaceuticals"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalGoods"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommercialProfessionalServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalMarkets"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerFinance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancialServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageREIT"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageRealEstateInvestmentTrusts"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CapitalMarkets"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerFinance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedFinancialServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MortgageRealEstateInvestmentTrusts"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Chemicals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConstructionMaterials"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContainersPackaging"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MetalsMining"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PaperForestProducts"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CollectionHobby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CompetitiveHobby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalHobby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GeneralHobby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ObservationHobby"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#College"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GraduateSchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GrandeEcole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InstituteOfTechnology"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ResearchLaboratory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Seminary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#University"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CommunicationsEquipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectronicEquipmentInstrumentsComponents"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareStoragePeripherals"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ComprehensiveSchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElementarySchool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MiddleSchool_PrimaryPart"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Distributors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InternetDirectMarketingRetail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultilineRetail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SpecialtyRetail"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DiversifiedTelecommunicationServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MediaEntertainment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WirelessTelecommunicationServices"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryInstitution"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Experience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hobby"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ElectricUtilities"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#GasUtilities"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IndependentPowerRenewableElectricityProducers"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MultiUtilities"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#WaterUtilities"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Employee"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Self-Employed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Worker"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Entertainment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InteractiveMediaServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Media"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodStaplesRetailing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdPersonalProducts"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareEquipmentSupplies"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareProvidersServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HealthCareTechnology"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryEducation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SecondaryEducation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HouseholdDurables"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LeisureProducts"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TextilesApparelLuxuryGoods"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kindergarten"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Nursery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Preschool"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Non-Profit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Private"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Public"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#NonProfessional"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Student"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SemiconductorsSemiconductorEquipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareServices"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnologyHardwareEquipment"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
