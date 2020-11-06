@@ -56,6 +56,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canBeMasteredAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canBeMasteredAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canTeach"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isIncludedInSector"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializationOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canBeOccupiedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canBeOccupiedBy">
@@ -86,6 +108,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canTeach -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canTeach">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Skill"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#impliesMasteryOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canWorkAs -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canWorkAs">
@@ -93,7 +136,17 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IsAttendingEducationalInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#impliesMasteryOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isRequiredForJob"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasBackground"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isRequiredForJob"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#pursuesEducation"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isRequiredForJob"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -196,19 +249,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobResponsibility -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasJobResponsibility">
@@ -244,6 +284,19 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Job"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#JobType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasNotBackground -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasNotBackground">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isNotBackgroundOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
     </owl:ObjectProperty>
     
 
@@ -341,18 +394,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isHigherEducationOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isIncludedInSector -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isIncludedInSector">
@@ -423,6 +464,18 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isNotBackgroundOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isNotBackgroundOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
     </owl:ObjectProperty>
     
 
@@ -549,6 +602,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#needsToApplyTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#needsToApplyTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#needsToMaster"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#canBeMasteredAt"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#needsToMaster -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#needsToMaster">
@@ -562,6 +629,12 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#wantsWorkAs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#requiresBackground"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isNotBackgroundOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasNotBackground"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -667,6 +740,10 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#prefers"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isSpecializedInSector"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#wantsWorkAs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#isProposedBy"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -788,15 +865,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Airlines">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Transportation"/>
         <rdfs:label xml:lang="en">Airlines</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
-        <rdfs:label xml:lang="en">Associate</rdfs:label>
     </owl:Class>
     
 
@@ -1175,15 +1243,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
-        <rdfs:label xml:lang="en">DynamicSchedule</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodEducation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodEducation">
@@ -1457,15 +1516,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FixedTermContract -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FixedTermContract">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
-        <rdfs:label xml:lang="en">FixedTermContract</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodBeverageTobacco">
@@ -1489,24 +1539,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FoodStaplesRetailing">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ConsumerStaples"/>
         <rdfs:label xml:lang="en">FoodStaplesRetailing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
-        <rdfs:label xml:lang="en">Freelance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
-        <rdfs:label xml:lang="en">Full-Time</rdfs:label>
     </owl:Class>
     
 
@@ -1692,15 +1724,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
-        <rdfs:label xml:lang="en">Hybrid</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ITServices -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ITServices">
@@ -1774,40 +1797,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
-        <rdfs:comment xml:lang="en">The enterprises with this scale are present at least in 2 different countries.</rdfs:comment>
-        <rdfs:label xml:lang="en">International</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InternetDirectMarketingRetail -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InternetDirectMarketingRetail">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Retailing"/>
         <rdfs:label xml:lang="en">InternetDirectMarketingRetail</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
-        <rdfs:label xml:lang="en">Internship</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
-        <rdfs:comment xml:lang="en">The enterprises with this scale are present at least in 2 different planets (NASA, SpaceX).</rdfs:comment>
-        <rdfs:label xml:lang="en">Interplanetary</rdfs:label>
     </owl:Class>
     
 
@@ -1912,17 +1906,6 @@ Each job must pessede all of them, thus, thay are not disjoint.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
         <rdfs:comment xml:lang="en">Theoretical person&apos;s knowledge, e.g. sciences, fields of study.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
-        <rdfs:comment xml:lang="en">Enterprises with more than 249 employees.</rdfs:comment>
-        <rdfs:label xml:lang="en">LargeEntreprise</rdfs:label>
     </owl:Class>
     
 
@@ -2034,31 +2017,11 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
-        <rdfs:comment xml:lang="en">50 to 249 persons employed.</rdfs:comment>
-        <rdfs:label xml:lang="en">Medium</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MetalsMining -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MetalsMining">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
         <rdfs:label xml:lang="en">MetalsMining</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
-        <rdfs:comment xml:lang="en">Fewer than 10 persons employed.</rdfs:comment>
-        <rdfs:label xml:lang="en">Micro</rdfs:label>
     </owl:Class>
     
 
@@ -2108,16 +2071,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
-        <rdfs:comment xml:lang="en">The enterprises with this scale are present at least in 2 different cities of the same country and are present only in one country.</rdfs:comment>
-        <rdfs:label xml:lang="en">National</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Non-Profit -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Non-Profit">
@@ -2137,16 +2090,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IsAttendingEducationalInstitution"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
@@ -2194,38 +2137,11 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
-        <rdfs:label xml:lang="en">OnSite</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PaperForestProducts -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PaperForestProducts">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Materials"/>
         <rdfs:label xml:lang="en">PaperForestProducts</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
-        <rdfs:label xml:lang="en">Part-Time</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PermanentContract -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PermanentContract">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
-        <rdfs:label xml:lang="en">PermanentContract</rdfs:label>
     </owl:Class>
     
 
@@ -2337,7 +2253,7 @@ In turn, the Country can be a location of the City.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasHigherEducation"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#hasEducation"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2395,25 +2311,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstateManagementDevelopment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RealEstate"/>
         <rdfs:label xml:lang="en">RealEstateManagementDevelopment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
-        <rdfs:comment xml:lang="en">The enterprises with this scale are present only in one city.</rdfs:comment>
-        <rdfs:label xml:lang="en">Regional</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
-        <rdfs:label xml:lang="en">Remote</rdfs:label>
     </owl:Class>
     
 
@@ -2502,8 +2399,8 @@ In turn, the Country can be a location of the City.</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EducationalInstitution"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Enterprise"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Professional"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -2550,16 +2447,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Background"/>
         <rdfs:comment xml:lang="en">Applied persoon&apos;s skills that can be useful in professional activities.</rdfs:comment>
         <rdfs:label xml:lang="en">Skill</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
-        <rdfs:comment xml:lang="en">10 to 49 persons employed.</rdfs:comment>
-        <rdfs:label xml:lang="en">Small</rdfs:label>
     </owl:Class>
     
 
@@ -2806,6 +2693,50 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AgroParisTech -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AgroParisTech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
+        <hasStudent rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lili"/>
+        <isSituatedInLocation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Paris"/>
+        <hasName>AgroParisTech</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Architect -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Architect">
+        <requiresBackground rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CivilEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CivilEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#CivilEngineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Knowledge"/>
+        <isIncludedInSector rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UrbanDevelopment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScientist -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DataScientist">
@@ -2815,10 +2746,65 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+        <isJobTypeOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+        <isPreferenceOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ENSTA_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ENSTA_Paris">
+        <isSpecializedInSector rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene">
-        <hasBackground rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Python"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Facebook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Facebook">
+        <proposesJob rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+        <hasName>Facebook</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FixedTermContract -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FixedTermContract">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#France"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
     </owl:NamedIndividual>
     
 
@@ -2828,7 +2814,46 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Google">
         <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#StartUp"/>
         <isSituatedInLocation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kyiv"/>
-        <proposesJob rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IoTArchitect -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#IoTArchitect">
+        <requiresBackground rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MasterDegree"/>
     </owl:NamedIndividual>
     
 
@@ -2837,6 +2862,29 @@ In turn, the Country can be a location of the City.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Java">
         <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TechnicalSkill"/>
+        <isNotBackgroundOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Eugene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Javier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Javier">
+        <prefers rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</hasAge>
+        <hasFirstName>Javier</hasFirstName>
+        <hasLastName>Martinez</hasLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kevin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kevin">
+        <hasBackground rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Python"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasAge>
+        <hasFirstName>Kevin</hasFirstName>
+        <hasLastName>Sanchez</hasLastName>
     </owl:NamedIndividual>
     
 
@@ -2851,10 +2899,84 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LargeEntreprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Lili">
+        <pursuesEducation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MasterDegree"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasAge>
+        <hasFirstName>Lili</hasFirstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MasterDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#MasterDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#HigherEducation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Paris -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Paris">
-        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#City"/>
+        <isSituatedInLocation rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EmploymentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PermanentContract -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PermanentContract">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#ContractType"/>
     </owl:NamedIndividual>
     
 
@@ -2868,15 +2990,66 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EnterpriseScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#LocationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SME"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineer">
+        <requiresBackground rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Java"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#SoftwareEngineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#InformationTechnology"/>
+        <impliesMasteryOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Java"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Ukraine -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Ukraine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UrbanDevelopment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#UrbanDevelopment">
+        <isSpecializationOf rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#AgroParisTech"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Vinci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Vinci">
+        <proposesJob rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Architect"/>
+    </owl:NamedIndividual>
     
 
 
@@ -2922,16 +3095,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Marine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#RoadRail"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#TransportationInfrastructure"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Associate"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FixedTermContract"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Freelance"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Internship"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PermanentContract"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3088,14 +3251,6 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#DynamicSchedule"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Full-Time"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Part-Time"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#EarlyChildhoodInstitution"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#FurtherHigherEducationalInstitution"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#PrimaryInstitution"/>
@@ -3173,34 +3328,9 @@ In turn, the Country can be a location of the City.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Hybrid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#OnSite"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Remote"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#International"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Interplanetary"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#National"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Regional"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Kindergarten"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Nursery"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Preschool"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Medium"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Micro"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation#Small"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
