@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/eugene/ontologies/2020/10/futureCareerRecommendation/20.11.01"/>
         <dc:licence>Creative Commons Attribution 4.0 International License</dc:licence>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">futureCareerRecommendation</rdfs:label>
     </owl:Ontology>
